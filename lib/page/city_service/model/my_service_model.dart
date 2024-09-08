@@ -28,6 +28,7 @@ enum MyServiceItemId {
   library,
   locationSearch,
   zoo,
+  chatbot,
   ;
 }
 
@@ -173,6 +174,13 @@ extension MyServiceIdExt on MyServiceItemId {
           icon: Assets.svg.iconZoo24.svg(),
           category: MyServiceCategory.explore,
           destinationUrl: '',
+        ),
+        MyServiceItemId.chatbot => MyServiceItem(
+          title: '智慧客服',
+          description: '台北通智慧機器人',
+          icon: Assets.svg.chatbot.svg(),
+          category: MyServiceCategory.other,
+          destinationUrl: 'http://localhost:5173/',
         ),
     };
   }
